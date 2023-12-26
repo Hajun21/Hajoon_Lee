@@ -1,17 +1,22 @@
 #include <stdio.h>
-
-int main(void)
-{
-	printf("Hello world");
-	return 0;
-}
-
+//
+////int main(void)
+//{
+//	printf("Hello world\n안녕하세요");
+//	return 0;
+//}
+//
 
 #include <stdio.h>
 
 int main(void)
 {
-	printf("Hello world\n안녕하세요");
-	return 0;
-}
+printf("나의 이름은 준입니다.\n");
+printf("나는 25살이고\n");
+printf("사는 곳은 한국입니다.\n\n");
+printf("1010	노트북	10	100\n");
+printf("2020	휴대폰	20	110\n");
+printf("3030	테블릿	30	90\n");
 
+return 0;
+}
