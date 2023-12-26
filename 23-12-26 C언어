@@ -31,12 +31,6 @@
 //	printf("Hello world\t 안녕하세요\n");
 //}
 
-
-#include <stdio.h>
-//int main(void)
-//{
-//	printf("나의 이름은 이하준 입니다\n나는 25살이고\n사는 곳은 대구입니다\n\n제품코드 제품명 수량 단가\n1010\t 노트북 10   100\t\n2020\t 휴대폰 20   110\t\n3030\t 테블릿 30   90\t ");
-//}
 // 많이 발생시키는 오류
 // 1. main이 두개가 있는 경우
 // 2. #include <studio.h>
