@@ -5,3 +5,13 @@ int main(void)
 	printf("Hello world");
 	return 0;
 }
+
+
+#include <stdio.h>
+
+int main(void)
+{
+	printf("Hello world\n안녕하세요");
+	return 0;
+}
+
