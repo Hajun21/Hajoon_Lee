@@ -1,3 +1,51 @@
+//#include <stdio.h>
+//int main() {
+//	int n1;	
+//
+//	n1 = 10;	
+//
+//	printf("%d\n", n1);	 
+//
+//	int n2 = 20;	
+//	
+//	printf("%d\n", n1 + n2);
+//
+//	return 0;
+//}
+
+//#include <stdio.h>
+//int main() {
+//	int num1;	
+//	int num2;
+//	int num3;
+//	int num4;
+//
+//	num1 = 10;
+//	num2 = 20;
+//	num3 = num1 + num2;
+//	num4 = num2 - num1;
+//
+//	printf("%d\n", num3);	 
+//	printf("%d\n", num4);
+//
+//	return 0;
+//}
+
+////#include <stdio.h>
+//	int main() 
+//	{
+//	char ch1 = 'a';
+//	char ch2 = 97;					//011000001
+//	char ch3 = 0b1100001;			// 2진법
+//	char ch4 = '!';
+//
+//	printf("ch1 = %c\n", ch1);		//  %c : 문자를 받는다.
+//	printf("ch2 = %c\n", ch2);
+//	printf("ch3 = %c\n", ch3);
+//	printf("ch4 = %d\n", ch4);
+//	return 0;
+//	}              // C언어는 ASCII 코드표를 이용한다. 문자 or 숫자 든 간에 전부 비트열로 저장된다.
+
 %d: 10진수(정수형)
 %f: 실수형
 %e: 지수형
@@ -100,19 +148,6 @@ int main ()
  C언어는 ASCII 코드표를 이용한다.
  문자 or 숫자 든간에 전부 비트열로 저장된다.
 
-#include <stdio.h>
-int main()
-{
-	char ch1 = 'a';
-	char ch2 = 97;
-	char ch3 = 0b1100001;				// 2진법
-	char ch4 = '!';
-	
-	printf("ch1 = %c\n", ch1);		//  %c : 문자를 받는다.
-	printf("ch2 = %c\n", ch2);
-	printf("ch3 = %c\n", ch3);
-	printf("ch4 = %c\n", ch4);
-}
 
  08 문자열 저장(배열)
 
