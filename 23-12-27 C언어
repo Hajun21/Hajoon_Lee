@@ -83,7 +83,7 @@ int main()
 	printf("ch1 = "%c\n", ch1);		//  %c : 문자를 받는다.
 	printf("ch2 = "%c\n", ch2);
 	printf("ch3 = "%c\n", ch3);
-	printf("ch4 = "%d\n", ch4);
+	printf("ch4 = "%c\n", ch4);
 }
 
  08 문자열 저장(배열)
