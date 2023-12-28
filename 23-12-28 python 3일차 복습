@@ -1,0 +1,60 @@
+# a = ['사과', '복숭아', '포도']
+# print(a)
+# b = ['김치', '불고기', '비빔밥']
+# print(b)
+# c = a + b
+# print(c)
+#
+# c[2] = '바나나'
+# print(c)
+#
+# s1 = {1, 2, 3}
+# print("세트 s1 :", s1)
+#
+# s1.add(9)
+# print("세트 s1 :", s1)
+#
+# s1.update([6, 5, 4,0])
+# print("세트 s1 :", s1)
+# print(type(s1))
+
+dic = {"name": "홍길동", "birthday": "1212"}
+print("딕셔너리 dic :", dic)
+
+dic['name'] = '라이언'
+print("딕셔너리 dic :", dic)
+
+dic['address'] = '대구'
+print("딕셔너리 dic :", dic)
+
+del dic['address']
+print("딕셔너리 dic :", dic)
+
+print(dic.keys())
+a = list(dic.keys())
+print(a)
+
+print(dic.values())
+b = list(dic.values())
+print(b)
+
+print(2020, 10, 31 , sep='/', end=' ')
+print(11, 43, 59, sep=':')
+print()
+
+a = ['사과', '복숭아', '포도']
+print(a)
+
+b = ['김치', '불고기', '비빔밥']
+print(b)
+
+c= a + b
+print(c)
+
+c[2]= '바나나'
+print(c)
+
+print('즐거운','파이썬')
+print('Python', 'Java', 'C', sep=',', end=':')
+print('100점')
+
