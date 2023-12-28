@@ -17,6 +17,7 @@
 //	printf("%s\n", str3);
 //}
 
+//hint : %s : 문자열이다.   %d는 정수(숫자를받는다.) %c : 한글자만 받는다.(영어기준)
 // 이름(자료형 char name[10]) : 홍길동
 // 나이(int age) : 44
 // 성별(char gender) : 'M'
@@ -28,8 +29,8 @@
 //int main()
 //{
 //	char name[10] = "홍길동";
-//	int age = '44';  //char age = '44'; 오답   //[10] 왜 없는
-//	char gender = 'M'; //' '  "  "
+//	int age = '44'; 
+//	char gender = 'M';
 //	char addr[100] = "대구광역시 달서구";
 //	printf("1. 이름 : ");           
 //	printf("%s\n", name);
@@ -53,26 +54,27 @@
 // char < short < int < long < long long < float < double
 
 //#include <stdio.h>
+//
 //int main()
 //{
 //	short svar = 10;
-//	int ivar = svar;   // 자동형변환(큰공간 = 작은 값)
-//	printf("ivar = %d\n ", ivar);
+//	int ivar = svar; // 자동형변횐(큰공간 == 작은값)
+//	printf("ivar = %d\n", ivar);
 //
 //	char cvar = 'a';
-//	ivar = cvar;		//
-//	printf("ivar = %c\n ", ivar);
-//	
-//	long long lvar = ivar;  //  자동형변환
-//	printf("ivar = %d\n ", ivar);
+//	ivar = cvar; // 자동형변환
+//	printf("ivar = %c\n", ivar);
 //
-//	float fvar = ivar;
-//	printf("ivar = %f\n ", ivar);           // 다시
+//	long long lvar = ivar; // 자동형변환
+//	printf("lvar = %d\n", lvar);
 //
-//	double dvar = lvar;
-//	printf("ivar = %f\n ", ivar);
+//	float fvar = lvar;
+//	printf("fvar = %f\n", fvar); //(주의)자동형변환
+//
+//	double dvar = lvar;//(주의)자동형변환
+//	printf("dvar = %f\n", dvar);
 //}
-//
+
 // 02 강제형변환
 // 프로그래머에 의해 특정한 자료형으로 강제형변환 하는 경우
 //#include <stdio.h>
@@ -88,7 +90,6 @@
 //}
 
 // 03 연산시 자동(강제)형변환(나눗셈)
-//
 //#include <stdio.h>
 //int main()
 //{
@@ -106,10 +107,10 @@
 //int main()
 //{
 //	int n1 = 0;
-//	printf("정수 1 입력 : ");                                    //프로그램 확인
+//	printf("정수 1 입력 : ");
 //	scanf_s("%d", &n1);
-//	// scanf_s : 표준입력장치(키보드)로부터 프로그램 방향으로 값을 받을 때 사용
-//	// "%d" : 정수서식에 맞게 값을 받겠다.
+//	//scanf_s : 표준입력장치(키보드)로부터 프로그램 방향으로 값을 받을 때 사용
+//	//"%d" : 정수서식에 맞게 값을 받겠다.
 //	// &(참조연산자) : 공간의 주소값을 반환
 //	printf("입력한 값 : %d\n", n1);
 //}
@@ -119,15 +120,23 @@
 //	int n1 = 0;
 //	int n2 = 0;
 //	printf("정수 2개 입력 : ");
-//	printf("%d%d", &n1, &n2);							//값은 스페이스바 혹은 엔터키를 기준으로 확인  //확인
+//	scanf_s("%d%d", &n1, &n2); // 값은 스페이스바 혹은 엔터키를 기준으로 확인
 //	printf("n1 = %d, n2 = %d\n", n1, n2);
 //}
 
 // 문제
-// 정수 3개를 한번에 받아서 세수의 합 / 곱 / 차를 출력해보세요   //문제확인
+// 정수 3개를 한번에 받아서 세수의 합 / 곱 / 차를 출력해보세요
+//int main()
+//{
+//	int n1, n2, n3 = 0; // n1,n2,n3 = 0
+//	printf("정수 3개 입력 >>> ");
+//	scanf_s("%d%d%d", &n1, &n2, &n3);
+//	printf("합 : %d\n", n1 + n2 + n3);
+//	printf("곱 : %d\n", n1 * n2 * n3);
+//	printf("차 : %d\n", n1 - n2 - n3);
+//}
 
 // 03 scanf_s 서식문자 따른 값 받기
-
 // %d : 10진 정수
 // %f : 실수(float) 형
 // %lf : double형 서식
@@ -140,39 +149,37 @@
 //	double n2;
 //	char ch;
 //
-//	printf("정수 입력 :");
+//	printf("정수 입력 : ");
 //	scanf_s("%d", &n1);
-//	printf("저장된 정수 :");
+//	printf("저장된 정수 : %d\n", n1);
 //
-//	printf("실수 입력 :");
+//	printf("실수 입력 : ");
 //	scanf_s("%lf", &n2);
-//	printf("저장된 실수 :", "%lf\n", n2);
+//	printf("저장된 실수 : %lf\n", n2);
 //
-//	printf("문자 입력 :");
+//
+//	scanf를 반복적으로 사용할 때 숫자값 입력과 문작밧 입력 사이에 rewind(stdin)을 이용해서 버퍼공간을 초기화시켜주지 않으면 
+//  버퍼공간에 남아있는 문자 or 문자열 값이 다음 scanf의 입력된 값으로 해석되기 때문에 문제가 발생한다.
+//
+//	rewind(stdin);
+//
+//	printf("문자 입력 : ");
 //	scanf_s("%c", &ch);
-//	printf("저장된 문자 :", "%c\n", ch);
-//
-//	// scanf를 반복적으로 사용할 때 숫자 값 입력과 문잣값 입력 사이에 rewind(stdin)을 이용해서
-//	// 버퍼공간을 초기화시켜주지 않으면 버퍼공간에 남아있는 문자 or 문자열 값이  다음 scanf의 입력된 값으로 해석되기 때문에 문제가 발생한다.
-//
-//	rewind(stdin);                     //확인
-//	printf
+//	printf("저장된 문자 : %c\n", ch);
 //}
 
-// 04 문자열 받기
+//04 문자열 받기
 //int main()
 //{
 //	char gender;
 //	char name[20];
 //
 //	printf("성별(M/W) : ");
-//	scanf_s("%c", &gender, sizeof(gender));
+//	scanf_s("%c", &gender, sizeof(gender)); // sizeof : 크기를 정해준다.
 //	printf("이름 : ");
-//	scanf_s("%s", &name, sizeof(name));		// 배열은 &가 생략될 수 있다. (포인터 파트에서 설명)
-
+//	scanf_s("%s", name,sizeof(name)); // 배열은 &가 생략될 수 있다. (포인터 파트에서 설명)
 //
-//	printf("이름 : %s\n, 성별 : %c\n", name, gender);
-//	
+//	printf("이름 : %s\n성별 : %c\n", name, gender);
 //}
 
 // 문제
@@ -184,12 +191,13 @@
 // 평균점수는 소수점 이하 2자리까지 출력합니다
 // 나눗셈 과정에서 소수점이하 값이 유지되도록 강제 형변환 처리합니다.
 
-//int main()         //확인
+//int main()
 //{
 //	int n1, n2, n3;
-//	printf("국, 수 ,영 순서대로 점수 입력 >>>");
+//	printf("국,수,영 순대로 점수 입력 >>> ");
 //	scanf_s("%d%d%d", &n1, &n2, &n3);
-//	printf("총점 ")
+//	printf("총점 : %d\n", n1 + n2 + n3);
+//	printf("평균 : %.2f\n", (float)(n1 + n2 + n3) / 3);
 //}
 
 // 문제
@@ -201,14 +209,13 @@
 // -> 여기서 홍길동, 50은 고정된 값이 아니라 키보드로 입력값을 받는 변수입니다.
 // -> 다른 값으로도 바뀔 수 있기 때문에 두번째 라인에서는 입력받은 이름이 출력될 수 있도록 처리해야 됩니다.
 
-//int main()            //문제
-//
+//int main()
 //{
 //	char name[20];
-//	char age;
-//	printf("당신의 이름은 무엇입니까?");
-//	scanf_s("%s", &name, sizeof(name));
-//	printf("%s님의 나이는 몇살입니까?", name);
+//	int age;
+//	printf("당신의 이름은 무엇입니까? ");
+//	scanf_s("%s", name, sizeof(name));
+//	printf("%s님의 나이는 몇살입니가?", name);
 //	scanf_s("%d", &age, sizeof(age));
 //	printf("%s님의 나이는 %d 입니다.", name, age);
 //}
@@ -227,6 +234,8 @@
 
 // 02 복합대입연산(+=, -=, *=, /*, %=)
 
+// 02 복합대입연산(+=,-=,*=,/*, %=)
+
 //#include <stdio.h>
 //int main()
 //{
@@ -235,8 +244,10 @@
 //	printf("a = %d\n", a);
 //	a -= b; // a = a - b
 //	printf("a = %d\n", a);
-//	a *= b; // a = a * b
-//	printf("a = %d\n", a);        //비교
+//	a *= b; // a = a * b;
+//	printf("a = %d\n", a);
+//	a /= b; // a = a / b
+//	printf("a = %d\n", a);
 //}
 
 // 03 비교연산자
@@ -258,34 +269,21 @@
 #include <stdio.h>
 //int main()
 //{
-//	// AND 연산자(&&)
-//	// 1. 왼쪽의 조건식이 거짓이면 오른쪽 조건식을 평가하지 않는다.
-//	// 2. "&&" 연산자는 일반적으로 "II" 연산자보다 우선순위가 높다.
-//	// 3. "&&" 연산자의 결과는 논리값(참 또는 거짓) 이다.
+//	AND연산자(&&)
+//	 1. 왼쪽의 조건식이 거짓이면 오른쪽 조건식을 평가하지 않는다.
+//	 2. "&&" 연산자는 일반적으로 "||" 연산자보다 우선순위가 높다.
+//	 3. "&&" 연산자의 결과는 논리값(참 또는 거짓)이다.
 //
-////	int a = 10, b = 20;
-////	printf("a > 10 && a > 20 ? %d\n", a > 10 && a > 20);
-////	printf("a < 11 && a < 20 ? %d\n", a < 11 && a < 20);
-////}
-////
-// OR 연산자( II )
-////int a = 5, b = 9, c = 0;
-////printf("a == b II a < b ? %d\n", a == b II a < b);
-////printf("a == b II a < b ? %d\n", a > b II a >b);       //확인 II
+//	int a = 10, b = 20;
+//	printf("a > 10 && a > 20 ? %d\n", a > 10 && a > 20);
+//	printf("a < 11 && a < 20 ? %d\n", a < 11 && a < 20);
 //
-//// NOT 연산자( ! )
-//	printf("!참 ? %d\n", !10);		// 참이라면 거짓이 된다.
-//	printf("!거짓 ? %\n", !0);		// 거짓이라면 참이 뜬다.            // 검색
-//}
-
-////문제 숙제
-//int main()
-//{
-//	int a = 0, b = 0, c = 0;
-//	// 키보드로 각각 정수값을 입력받아 a,b,c변수에 저장한다.
-//	// 각 문잔을 보면서 문장에 맞게 적절히 and, or 연산자 기호를 써서 출력합니다.
-//	// 1) a가 b와 같고 a는 10보다 크고 b도 10보다 큰지 출력(출력 결과는 0 or 1)
-//	// 2) a가 b보다 크면서 a가 0이 아닌지 확인하여 출력(출력 결과는 0 or 1)
-//	// 3) a가 5보다 크거나 b가 10보다 작은지 확인하여 출력(출력 결과는 0 or 1)
-//	// 4) a가 b보다 크고 a가 c보다 크고 a가 0이 아닌지 확인하여 출력
+//	 OR 연산자 ||
+//	int a = 5, b = 9, c = 0;
+//	printf("a == b || a < b? %d\n", a == b || a < b);
+//	printf("a  > 5 || b > 10 ?%d\n", a > 5 || b > 10);
+//
+//	NOT연산자(!)
+//	printf("!참 ? %d\n", !10); //참이라면 거짓이 뜬다.
+//	printf("!거짓 ? %d\n", !0); //거짓이라면 참이 뜬다.
 //}
