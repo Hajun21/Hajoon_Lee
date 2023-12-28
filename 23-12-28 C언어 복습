@@ -1,0 +1,86 @@
+//#include <stdio.h>
+//int main()
+//{
+//	char name[10] = "홍길동";
+//	int age = '50';
+//	int gender = 'M';
+//	char addr[100] = "대구 광역시 중구";
+//
+//	printf("1. 이름: ");
+//	printf("%s\n", name);
+//	printf("2. 나이: ");
+//	printf("%d\n", age);
+//	printf("3. 성별: ");
+//	printf("%c\n", gender);
+//	printf("4. 주소: ");
+//	printf("%s\n", addr);
+//	return 0;
+//
+//}
+//#include <stdio.h>
+//
+//int main()
+//{
+//	short svar = 10;
+//	int ivar = svar; // 자동형변환(큰공간 == 작은값)
+//	printf("ivar = %d\n", ivar);
+//
+//	char cvar = 'a';
+//	ivar = cvar; // 자동형변환
+//	printf("ivar = %c\n", ivar);
+//
+//	long long lvar = ivar; // 자동형변환
+//	printf("lvar = %d\n", lvar);
+//
+//	float fvar = lvar;
+//	printf("fvar = %f\n", fvar); //(주의)자동형변환
+//
+//	double dvar = lvar;//(주의)자동형변환
+//	printf("dvar = %f\n", dvar);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+////	// int : 약 21, short : 32000
+//	int ivar = 50000;
+//    short svar = (short)ivar;
+//	char cvar = (char)ivar;
+//
+//	printf("svar = %d\n", svar);
+//	printf("cvar = %d\n", cvar);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int num = 10;
+//	int div = 4;
+//	double r1 = num / div;
+//	double r2 = (float)num / div;
+//
+//	printf("r1 = %f\n", r1);
+//	printf("r2 = %f\n", r2);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int n1, n2, n3;
+//	printf("국, 수, 영 순서대로 점수 입력>>>");
+//	scanf_s("%d%d%d", &n1, &n2, &n3);
+//	printf("총점 : %d\n", n1 + n2 + n3);
+//	printf("평균 : %.f\n", (float)(n1 + n2 + n3) / 3);
+//}
+
+//#include <stdio.h>
+//int main()
+//{
+//	char name[20];
+//	int age;
+//	printf("당신의 이름은 무엇입니까?");
+//	scanf_s("%s", name, sizeof(name));
+//	printf("%s님의 나이는 몇살입니까?", name);
+//	scanf_s("%d", &age, sizeof(age));
+//	printf("%s님의 나이는 %d살 입니다.", name, age);
+//}
