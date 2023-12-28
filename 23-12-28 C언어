@@ -31,10 +31,10 @@
 //	int age = '44';  //char age = '44'; 오답   //[10] 왜 없는
 //	char gender = 'M'; //' '  "  "
 //	char addr[100] = "대구광역시 달서구";
-//	printf("1. 이름 : ");              //안했음
+//	printf("1. 이름 : ");           
 //	printf("%s\n", name);
 //	printf("2. 나이 : ");
-//	printf("%d\n", age);   //printf("%c\n", age); 오답 비교
+//	printf("%d\n", age); 
 //	printf("3. 성별 : ");
 //	printf("%c\n", gender);
 //	printf("4. 주소 : ");
@@ -67,7 +67,7 @@
 //	printf("ivar = %d\n ", ivar);
 //
 //	float fvar = ivar;
-//	printf("ivar = %f\n ", ivar);           // 다시212
+//	printf("ivar = %f\n ", ivar);           // 다시
 //
 //	double dvar = lvar;
 //	printf("ivar = %f\n ", ivar);
@@ -124,7 +124,7 @@
 //}
 
 // 문제
-// 정수 3개를 한번에 받아서 세수의 합 / 곱 / 차를 출력해보세요   //문제확인ㅂㄱ
+// 정수 3개를 한번에 받아서 세수의 합 / 곱 / 차를 출력해보세요   //문제확인
 
 // 03 scanf_s 서식문자 따른 값 받기
 
