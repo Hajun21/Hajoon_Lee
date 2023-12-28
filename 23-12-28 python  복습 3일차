@@ -38,6 +38,10 @@ print(dic.values())
 b = list(dic.values())
 print(b)
 
+print(dic.items())     
+
+dic.clear()
+
 print(2020, 10, 31 , sep='/', end=' ')
 print(11, 43, 59, sep=':')
 print()
@@ -57,4 +61,5 @@ print(c)
 print('즐거운','파이썬')
 print('Python', 'Java', 'C', sep=',', end=':')
 print('100점')
+
 
