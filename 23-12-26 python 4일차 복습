@@ -29,8 +29,8 @@
 # b = int(input('두번째 정수는?'))
 # print('나눗셈의 몫은 {} 나머지는 {} 입니다.'.format(a // b, a % b))
 
-# 포매팅 비교하기
 
+# 포매팅 비교하기
 # n = 3     # 정수
 
 # print('I eat', n, 'apples.')
