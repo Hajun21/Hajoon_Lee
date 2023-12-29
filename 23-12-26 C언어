@@ -1,9 +1,5 @@
 // 01 c 언어 기본구조
 
-//주석 : 블럭지정 -> ctrl + k + c
-
-//주석 해제 : 블럭지정 -> ctrl + k + u
-
 #include <stdio.h>  //#includ : 전처리분 (예: 무엇을 추가하겠다.)
 //					//<stdio.h> : 헤더 파일 (기본 입출력 함수호출용)
 
@@ -47,3 +43,9 @@
 //	printf("3030	테블릿 30	90\n");
 //	return 0;
 //}
+
+//  int main(void)	//main 함수 헤더      main은 하나만 가능
+//  {						// main 함수 본체가 시작한다
+//	printf("Hello world");  //printf: C 언어에서 제공되는 기본 라이브러리 함수
+//	return 0;				//main 함수 종료시 전달되는 값(리턴 값)
+//  }							//main 함수 본체 끝
