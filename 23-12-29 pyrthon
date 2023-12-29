@@ -2,7 +2,6 @@
 # % 연산자, format() 메소드를 이용해 원하는 형식의 문자열을 만드는 것 / f-strings
 
 # % 연산자 (기본 포매팅)
-# 58page
 # name = 'kai'    # 문자열
 # print('내 이름은 %s 입니다.' % name)
 #
@@ -19,7 +18,6 @@
 # <형식>
 # '문자열 {}'.format(변수명)
 
-# 60page)
 # zipcode = '06236'
 # print('우편번호 : {}'.format(zipcode))
 #
@@ -73,13 +71,12 @@
 # print(f'I eat {n} apples.')         # f-strings (f문자열 포매팅)
 
 # 표준 입력 (input)
-# 63page)
 # name = input('이름을 입력하세요 >>>')
 # age = input('나이를 입력하세요 >>>')
 # print('입력된 이름은 {}입니다.'.format(name))
 # print('입력된 나이는 {}입니다'.format(age))
 
-# input() 함수는 모든 입력을 '문자열(str)'로 저장 ***
+# input() 함수는 모든 입력을 '문자열(str)'로 저장 #중요함
 
 # ex) input의 형 변환 (int or float)
 # a= input('입력: ')
@@ -107,7 +104,6 @@
 # print('덧셈 결과 : {}'.format(num1 + num2))
 # print('뺄셈 결과 : {}'.format(num1 - num2))
 
-# 65page)
 # price = 50000  # 물건값
 # n = int(input('할부 개월 입력 >>>'))  # 정수로 형 변환
 # print('매달 내는 돈은 {}원입니다.'.format(price / n))  # / - 나누기  # 실수형으로 출력
@@ -142,7 +138,6 @@
 # a %= 5
 # print('a의 값 : {}'.format(a))
 
-##################
 # 문제1) 변수 number에 정수 5를 담고 오늘 배운 3가지 포매팅 형식으로 출력해보자.
 # [출력결과]
 # I eat 5 apples.
