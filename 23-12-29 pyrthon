@@ -1,0 +1,165 @@
+# 형식을 갖춘 문자열 (문자열 포매팅)
+# % 연산자, format() 메소드를 이용해 원하는 형식의 문자열을 만드는 것 / f-strings
+
+# % 연산자 (기본 포매팅)
+# 58page
+# name = 'kai'    # 문자열
+# print('내 이름은 %s 입니다.' % name)
+#
+# height = 120.6
+# print('내 키는 %fcm 입니다.' % height)    # %f(실수) - 소수 여섯째 자리까지 출력
+#
+# weight = 23.55
+# print('내 몸무게는 %.1fkg 입니다.' % weight)    # %.1 <- .1 은 소수 첫째 자리까지반올림
+#
+# year, month, day = 2014, 8, 25      # 정수
+# print('내 생일은 %d년 %d월 %d일 입니다.' % (year, month, day))    # 여러개 일땐 () 한번 더
+
+# .format() 메서드
+# <형식>
+# '문자열 {}'.format(변수명)
+
+# 60page)
+# zipcode = '06236'
+# print('우편번호 : {}'.format(zipcode))
+#
+# address = '''서울 특별시 강남구
+# 테헤란로 146'''
+# print("주소 : {addr}".format(addr=address))
+#
+# tell, tell2, tell3 = '02', '111', '1234'
+# print('연락처 : {0}-{1}-{2}'.format(tell, tell2, tell3))
+
+# ex)
+# print('{0:<10}'.format('Hi'))     # 전체 10칸, 왼쪽 정렬
+# print('{0:>10}'.format('Hi'))     # 전체 10칸, 오른쪽 정렬
+# print('{0:^10}'.format('Hi'))     # 전체 10칸, 가운데 정렬
+# print()
+#
+# print('{:=^30}'.format('python'))    # 전체 30칸, 공백을 =로 포현, 가운데 정렬
+# print('{:!<30}'.format('python'))    # 전체 30칸, 공백을 !로 표현, 왼쪽 정렬
+#
+# n = 3.141592
+# print('{:.3f}'.format(n))           # 소수 셋째자리까지 반올림
+#
+# a = '파이썬 열공하여 첫 연봉 {}만원 만들기'.format(5000)
+# b = '{} {}  {}'.format(100, 200, 300)
+# c = '{} {} {}'.format(1, '파이썬', True)   # 정수형, 문자열, 논리형 그대로 나옴
+# print(a)
+# print(b)
+# print(c)
+
+# f-string (f 문자열 포매팅)
+#   <형식>
+#   f'문자열 {변수명} 문자열'
+#
+# ex)
+# name = '라이언'
+# age = 20
+# print(f'나의 이름은 {name} 나이는 {age}살입니다.')
+# print(f'나는 내년이면 {age+1}살이 됩니다.')
+#
+# print(f'{"python":=^30}')       # 전체 30칸, 공백을 =로 표현, 가운데 정렬
+# print(f'{"python":!<30}')       # 전체 30칸, 공백을 !로 표현, 왼쪽 정렬
+#
+# n = 3.141592
+# print(f'{n:.3f}')   # 소수 셋째자리까지 반올림
+
+# 포매팅 비교하기
+# n = 3     # 정수
+# print('I eat', n, 'apples.')
+# print('I eat %d apples.'% n)    # % 연산자 포매팅(기본 포매팅)
+# print('I eat {} apples.'.format(n)) # format 매서드 포매팅
+# print(f'I eat {n} apples.')         # f-strings (f문자열 포매팅)
+
+# 표준 입력 (input)
+# 63page)
+# name = input('이름을 입력하세요 >>>')
+# age = input('나이를 입력하세요 >>>')
+# print('입력된 이름은 {}입니다.'.format(name))
+# print('입력된 나이는 {}입니다'.format(age))
+
+# input() 함수는 모든 입력을 '문자열(str)'로 저장 ***
+
+# ex) input의 형 변환 (int or float)
+# a= input('입력: ')
+# print('변수 a의 값 : {}'.format(a))
+# print('변수 a의 자료형(타입) : {}'.format(type(a)))
+# print()
+#
+# b = int(input('입력 : '))         # 정수로 바꾸고 싶을때는 int(input())
+# print('변수 b의 값 : {}'.format(b))
+# print('변수 b의 자료형(타입) : {}'.format(type(b)))
+
+# ex) 더하기 계산의 차이
+# s1 = input('입력 s1 : ')
+# s2 = input('입력 s2 : ')
+# print('s1 + s2 = {}'.format(s1 + s2))               # 문자열로 인식 ex)5 + 7 = 57 이어붙임(연결)
+
+# ex) 정수형으로 입력받기
+# i1 = int(input('입력 i1 : '))
+# i2 = int(input('입력 i2 : '))
+# print('i1 + i2 ={}'.format(i1 + i2))               # 정수형으로 변환 했으니 정수로 인식 더하기 계산 ex) 5 + 7 = 12
+
+# ex) 실수형으로 입력받기
+# num1 = float(input('실수로 된 첫번째 숫자: '))
+# num2 = float(input('실수로 된 두번째 숫자: '))
+# print('덧셈 결과 : {}'.format(num1 + num2))
+# print('뺄셈 결과 : {}'.format(num1 - num2))
+
+# 65page)
+# price = 50000  # 물건값
+# n = int(input('할부 개월 입력 >>>'))  # 정수로 형 변환
+# print('매달 내는 돈은 {}원입니다.'.format(price / n))  # / - 나누기  # 실수형으로 출력
+
+# 섹션 4 : 연산자
+
+# 산술 연산자
+# 73page)
+# a = 7
+# b = 2
+# print('{} + {} = {}'.format(a, b, a + b))
+# print('{} - {} = {}'.format(a, b, a - b))
+# print('{} * {} = {}'.format(a, b, a * b))
+# print('{} ** {} = {}'.format(a, b, a ** b))
+# print('{} / {} = {}'.format(a, b, a / b))   # 결과가 실수형
+# print('{} // {} = {}'.format(a, b, a // b)) # 몫
+# print('{} % {} = {}'.format(a, b, a % b))   # 나머지
+
+# 복합 대입 연산자
+# ex) a 가 10에서 시작해서 코드가 진행될수록 값이 변하도록 해보기
+# a = 10
+# print('a의 값 : {}'.format(a))
+#
+# a += 5      # a = a + 5
+# print('a의 값 : {}'.format(a))
+# a -= 5
+# print('a의 값 : {}'.format(a))
+# a *= 5
+# print('a의 값 : {}'.format(a))
+# a /= 5
+# print('a의 값 : {}'.format(a))            # 결과가 실수형
+# a %= 5
+# print('a의 값 : {}'.format(a))
+
+##################
+# 문제1) 변수 number에 정수 5를 담고 오늘 배운 3가지 포매팅 형식으로 출력해보자.
+# [출력결과]
+# I eat 5 apples.
+# I eat 5 apples.
+# I eat 5 apples.
+# number = 5
+# print('I eat %d apples.' % number)
+# print('I eat {} apples.'.format(number))
+# print(f'I eat {number} apples.')
+
+# 문제2) 정수 변수 2개를 만들어 숫자를 입력받는다.
+# 아래의 출력결과처럼 나오게 해보자.
+# [출력결과]
+# 첫번째 정수는? 13
+# 두번째 정수는? 5
+# 나눗셈의 몫은 2 나머지는 3입니다.
+
+# a = int(input('첫번째 정수는?'))
+# b = int(input('두번째 정수는?'))
+# print('나눗셈의 몫은 {} 나머지는 {} 입니다.'.format(a // b, a % b))      # 여러개는 , 이용
